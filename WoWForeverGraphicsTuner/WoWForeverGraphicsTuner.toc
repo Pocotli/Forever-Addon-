@@ -1,0 +1,7 @@
+## Interface: 16001
+## Title: WoW Forever Graphics Tuner
+## Notes: Account-local graphics settings, current-client CVar discovery, and profile restore for WoW: Forever.
+## Author: ChatGPT with Pocotli
+## Version: 1.1.0
+## SavedVariables: WoWForeverGraphicsTunerDB
+WoWForeverGraphicsTuner.lua

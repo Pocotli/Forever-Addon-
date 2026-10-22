@@ -1,0 +1,17 @@
+WoW Forever Graphics Tuner
+===========================
+
+1.1.0
+- Adds the available raid-specific graphics controls to the curated panel.
+- Saves every readable graphics-related CVar discovered in the running client, not just sliders in the panel.
+- Exposes a broader runtime scan and guarded manual CVar editor for settings not represented by sliders.
+- Blocks the removed volumeFog toggle and legacy TBC-only shadow CVars from manual changes.
+- Checks the auto-apply toggle again before delayed profile restore.
+
+1.0.0
+- First separate addon for WoW: Forever, Interface 16001.
+- Uses the modern C_CVar and C_Console APIs, not the old TBC 2.4.3 CVar assumptions.
+- Discovers settings in the active client and hides missing CVars.
+- Saves and restores an account-local profile; no Pocotli preset is bundled.
+- Includes runtime scan and a guarded manual CVar editor.
+- Does not expose the removed volumeFog off-switch and does not allow giQuality=0.
