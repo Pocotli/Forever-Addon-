@@ -18,3 +18,59 @@ Nie trzeba wpisywać ani odczytywać loginu Druszlak. Dodatek korzysta z własny
 Ważne: przy pierwszym użyciu nowego konta trzeba najpierw zapisać jego ustawienia. To nie jest zdalna baza profili i nie synchronizuje zapisów między różnymi komputerami. Samo zainstalowanie dodatku nie pobiera ustawień Pocotli ani nie tworzy profilu dla Druszlak.
 
 Status testów: GitHub Actions zakończył się sukcesem — składnia Lua jest poprawna, a ZIP został utworzony. Nie uruchomiłem jednak klienta WoW: Forever, więc nie mogę jeszcze zagwarantować, że każdy CVar i automatyczne stosowanie ustawień zadziałają identycznie w aktualnym buildzie gry. Po instalacji najlepiej zacząć od /wfft i sprawdzić wykryte zmienne przyciskiem „Skanuj wszystkie CVary”.
+Tutaj gdy spytalem czy to legalne
+
+a jak z legalnoscia programu?
+W przypadku WoW Forever Graphics Tuner rozróżniłbym dwie rzeczy: czy sam dodatek jest legalny oraz czy sposób jego działania jest zgodny z regulaminem Blizzarda.
+
+Dobra wiadomość: to dodatek Lua uruchamiany wewnątrz gry, a nie osobny program ingerujący w pamięć procesu czy podmieniający pliki wykonywalne. Ma też być darmowy, bez reklam i bez płatnych funkcji. To przemawia na jego korzyść.
+
+Blizzard dopuszcza dodatki interfejsu, ale wymaga m.in. bezpłatnej dystrybucji, jawnego kodu źródłowego i zgodności z EULA. Jednocześnie zastrzega sobie możliwość blokowania nieautoryzowanego oprogramowania, które zmienia działanie gry. 
+
+World of Warcraft Forums
++2
+
+Co sprawdziłem i dodatkowo poprawiłem
+W wersji 1.1.1 ograniczyłem ręczny edytor CVar-ów: nie pozwala już zmieniać dowolnej zmiennej klienta, tylko te wykryte przez skaner jako związane z grafiką. Nadal respektuje ograniczenia klienta. Kontrola składni Lua i budowanie paczki zakończyły się sukcesem. Zobacz wyniki kontroli.
+
+Żeby utrzymać niskie ryzyko, dodatek powinien pozostać w obecnym modelu:
+
+korzysta z API dodatków udostępnionego przez grę;
+
+dotyczy ustawień graficznych, nie automatyzuje walki ani działań postaci;
+
+jest bezpłatny, bez reklam i bez próśb o dotacje w interfejsie;
+
+zawiera jawny kod źródłowy Lua, bez ukrywania go i bez podmiany plików wykonywalnych klienta.
+
+To odpowiada głównym wymaganiom opublikowanej przez Blizzard polityki dodatków. 
+
+World of Warcraft Forums
++1
+
+Ważna sprawa przed publicznym rozdaniem
+Repozytorium Pocotli/EcieNieB jest prywatne. Link do artefaktu GitHub Actions nie jest więc automatycznie publicznym linkiem dla wszystkich graczy. Żeby przekazać dodatek społeczności bezpłatnie, trzeba umieścić go w publicznie dostępnym miejscu, z czytelnym kodem źródłowym.
+
+Mój wniosek: nie widzę w obecnym przeznaczeniu dodatku oczywistego powodu, by uznać go za cheat lub niedozwolony program ingerujący w klienta. Nie mogę jednak zagwarantować, że Blizzard uzna każdą funkcję za dozwoloną. W swoich zasadach Blizzard zastrzega możliwość podjęcia działań wobec nieautoryzowanego oprogramowania. 
+
+World of Warcraft Forums
++1
+
+Jeśli zależy Ci na możliwie jednoznacznym potwierdzeniu przed rozdaniem dodatku wielu graczom, najbezpieczniej wysłać opis jego działania i kod do zespołu Blizzard pod wskazany w polityce adres WoWUI@blizzard.com. 
+
+World of Warcraft Forums
+
+to co mi dales to z kodem zrodlowym tak?
+Tak. WoW Forever Graphics Tuner 1.1.1 zawiera kod źródłowy — nie jest to skompilowany ani zaciemniony program.
+
+W paczce ZIP znajdują się:
+
+WoWForeverGraphicsTuner.lua — pełny kod źródłowy dodatku;
+
+WoWForeverGraphicsTuner.toc — metadane i konfiguracja ładowania;
+
+README_PL.txt — instrukcja instalacji i obsługi;
+
+CHANGELOG.txt — historia zmian.
+
+Jedna ważna uwaga: repozytorium Pocotli/EcieNieB jest prywatne, więc link do paczki GitHub Actions nie musi działać dla innych graczy. Jeżeli chcesz rozdawać dodatek całej społeczności WoW Forever, trzeba udostępnić ZIP i kod źródłowy w publicznie dostępnym miejscu.
