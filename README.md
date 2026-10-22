@@ -2,6 +2,8 @@ PLIK NIE ZOSTAL PRZETESTOWANY to Upgrade Chatgpt z tbc - > forever
 Addon aktywuje sie kolo mapy (obrazek na guziku lekko zjechal do dolu nie chcialo mi sie czekac kolejne 10min nim chat to zrobi)
 Ustawienia zapisuja sie automatycznie ale mozna dac anuluj wtedy wczyta te ustawienia ktore mielismy przed zmianami
 
+folder wrzucic do interface/addons w grze zaznaczyc Graphic tunner w addonach tam gdzie wybierasz postac.
+
  TUTAJ CO NAPISAL CHATGPT PO PRZEROBIENIU 
 
  Co zmieniłem
